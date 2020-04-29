@@ -97,6 +97,7 @@ namespace PayApp
                     + String.Format("{0,9:C2}",CalcPay.GetEmployeeCostPerCheck(employeeRecord)));
                 Console.WriteLine("The net check for the employee per pay period: "
                     + String.Format("{0,9:C2}",employeeRecord.Employee.GetPay - CalcPay.GetEmployeeCostPerCheck(employeeRecord)));
+                Console.WriteLine("");
             }
             Console.WriteLine("");
 
@@ -104,9 +105,9 @@ namespace PayApp
         static public void Annual(Company company)
         {
             Console.WriteLine("The total annual Salary cost to the company  is:          "
-                + String.Format("{0,9:C2}",CalcPay.GetCompanyCostPerYear(company)));
+                + String.Format("{0,11:C2}",CalcPay.GetCompanyCostPerYear(company)));
             Console.WriteLine("The total annual cost to employee portion of benefits is: "
-                + String.Format("{0,9:C2}",CalcPay.GetCompanyEmployeeCostPerYear(company)));
+                + String.Format("{0,11:C2}",CalcPay.GetCompanyEmployeeCostPerYear(company)));
             Console.WriteLine("");
 
         }
