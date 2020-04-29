@@ -10,13 +10,15 @@ namespace PayApp
         protected string lastName;
         protected bool employeeType;
         protected bool dependentType;
-        
+        private double pay = 2000; 
         public string FirstName 
         {
+            get => firstName;
             set { firstName = value; }
         } 
         public string LastName 
         {
+            get => lastName;
             set { lastName = value; }
         }
         public bool EmployeeType
@@ -27,6 +29,10 @@ namespace PayApp
         {
             set { dependentType = value; }
         }
+        public double GetPay
+        {
+            get => pay;
+        }
 
 
 
@@ -36,10 +42,6 @@ namespace PayApp
         }
         public override string ToString()
         {
-            if (employeeType)
-            {
-                return "Employee " + firstName + " " + lastName;
-            }
             return firstName + " " + lastName;
         }
     }

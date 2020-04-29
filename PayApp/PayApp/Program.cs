@@ -28,13 +28,13 @@ namespace PayApp
                             Commands.Adde(oneCompany);
                             break;
                         case "list":
-                            Commands.List();
+                            Commands.List(oneCompany);
                             break;
                         case "check":
-                            Commands.Check();
+                            Commands.Check(oneCompany);
                             break;
                         case "annual":
-                            Commands.Annual();
+                            Commands.Annual(oneCompany);
                             break;
                         case "help":
                             PrintHelp();
@@ -48,6 +48,7 @@ namespace PayApp
                             PrintError();
                             break;
                     }
+                    Console.WriteLine("Enter a command or type help for a list of commands.");
                 }
                 catch (Exception)
                 {
